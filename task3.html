@@ -1,0 +1,447 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Direct Automotive</title>
+
+<style>
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html{
+    scroll-behavior: smooth;
+}
+
+body{
+    font-family: Arial, sans-serif;
+    overflow-x: hidden;
+    background: #000;
+}
+
+/* ================= HEADER ================= */
+
+.navbar{
+    width: 100%;
+    height: 90px;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    padding: 0 50px;
+
+    background: rgba(0,0,0,0.6);
+
+    position: fixed;
+    top: 0;
+    left: 0;
+
+    z-index: 1000;
+    backdrop-filter: blur(5px);
+}
+
+/* ================= LOGO ================= */
+
+.logo{
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.logo-icon{
+    width: 0;
+    height: 0;
+
+    border-top: 12px solid transparent;
+    border-bottom: 12px solid transparent;
+    border-left: 28px solid white;
+}
+
+.logo-text{
+    color: white;
+    font-size: 30px;
+    font-weight: bold;
+}
+
+.logo-text span{
+    color: #ff7b00;
+}
+
+/* ================= MENU ================= */
+
+.menu{
+    display: flex;
+    gap: 35px;
+}
+
+.menu a{
+    color: white;
+    text-decoration: none;
+    font-size: 18px;
+    transition: 0.3s;
+}
+
+.menu a:hover{
+    color: #ff7b00;
+}
+
+/* ================= PARALLAX SECTION ================= */
+
+.parallax{
+
+    height: 100vh;
+
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+
+    text-align: center;
+    color: white;
+
+    position: relative;
+}
+
+/* DARK OVERLAY */
+
+.parallax::before{
+    content: "";
+
+    position: absolute;
+    inset: 0;
+
+    background: rgba(0,0,0,0.45);
+}
+
+.parallax-content{
+    position: relative;
+    z-index: 1;
+}
+
+/* ================= BACKGROUND IMAGES ================= */
+
+<!-- ================= BACKGROUND IMAGES ================= -->
+
+.bg1{
+    background-image:
+    linear-gradient(rgba(0,0,0,0.45),
+    rgba(0,0,0,0.45)),
+    url("C:/Users/RAHUL SHAH/Downloads/pexels-timmossholder-1136566.jpg");
+}
+
+.bg2{
+    background-image:
+    linear-gradient(rgba(0,0,0,0.45),
+    rgba(0,0,0,0.45)),
+    url("C:/Users/RAHUL SHAH/Downloads/red-car.jpg");
+}
+
+.bg3{
+    background-image:
+    linear-gradient(rgba(0,0,0,0.45),
+    rgba(0,0,0,0.45)),
+    url("C:/Users/RAHUL SHAH/Downloads/green-car.jpg");
+}
+
+.bg4{
+    background-image:
+    linear-gradient(rgba(0,0,0,0.45),
+    rgba(0,0,0,0.45)),
+    url("C:/Users/RAHUL SHAH/Downloads/pexels-lukzy-15469363.jpg");
+}
+
+.bg5{
+    background-image:
+    linear-gradient(rgba(0,0,0,0.45),
+    rgba(0,0,0,0.45)),
+    url("C:/Users/RAHUL SHAH/Downloads/pexels-mfitzart-36756649.jpg");
+}
+
+.bg6{
+    background-image:
+    linear-gradient(rgba(0,0,0,0.45),
+    rgba(0,0,0,0.45)),
+    url("C:/Users/RAHUL SHAH/Downloads/pexels-alexander-hamilton-30358033-9443581.jpg");
+}
+/* ================= TEXT ================= */
+
+.parallax h1{
+    font-size: 90px;
+    font-weight: 300;
+}
+
+.parallax p{
+    margin-top: 20px;
+    font-size: 24px;
+    letter-spacing: 2px;
+}
+
+/* ================= BUTTON ================= */
+
+.btn{
+    margin-top: 40px;
+
+    padding: 18px 50px;
+
+    border: none;
+    border-radius: 40px;
+
+    background: white;
+    color: black;
+
+    font-size: 20px;
+    font-weight: bold;
+
+    cursor: pointer;
+
+    transition: 0.3s;
+}
+
+.btn:hover{
+    background: #ff7b00;
+    color: white;
+    transform: scale(1.05);
+}
+
+/* ================= CONTENT SECTION ================= */
+
+.content{
+    background: #111;
+    color: white;
+
+    padding: 100px 60px;
+    text-align: center;
+}
+
+.content h2{
+    font-size: 55px;
+    margin-bottom: 20px;
+}
+
+.content p{
+    max-width: 900px;
+    margin: auto;
+
+    font-size: 20px;
+    line-height: 1.8;
+    color: #ccc;
+}
+
+/* ================= RESPONSIVE ================= */
+
+@media(max-width: 768px){
+
+    .navbar{
+        flex-direction: column;
+        height: auto;
+        padding: 20px;
+    }
+
+    .menu{
+        margin-top: 15px;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .parallax h1{
+        font-size: 50px;
+    }
+
+    .parallax p{
+        font-size: 18px;
+        padding: 0 20px;
+    }
+
+    .content h2{
+        font-size: 38px;
+    }
+
+    .content{
+        padding: 60px 20px;
+    }
+}
+
+</style>
+
+</head>
+
+<body>
+
+<!-- ================= HEADER ================= -->
+
+<header class="navbar">
+
+    <div class="logo">
+
+        <div class="logo-icon"></div>
+
+        <div class="logo-text">
+            Direct <span>Automotive</span>
+        </div>
+
+    </div>
+
+    <nav class="menu">
+
+        <a href="#">Home</a>
+        <a href="#">Contact</a>
+        <a href="#">About Us</a>
+        <a href="#">Pre-Owned</a>
+
+    </nav>
+
+</header>
+
+<!-- ================= SECTION 1 ================= -->
+
+<section class="parallax bg1">
+
+    <div class="parallax-content">
+
+        <h1>Yours To Drive</h1>
+
+        <p>
+            Luxury • Performance • Speed
+        </p>
+
+        <button class="btn">
+            Explore Deals →
+        </button>
+
+    </div>
+
+</section>
+
+<!-- ================= CONTENT ================= -->
+
+<section class="content">
+
+    <h2>Premium Automotive Experience</h2>
+
+    <p>
+        Discover the finest luxury cars with advanced technology,
+        premium interiors and powerful performance built for modern driving.
+    </p>
+
+</section>
+
+<!-- ================= SECTION 2 ================= -->
+
+<section class="parallax bg2">
+
+    <div class="parallax-content">
+
+        <h1>Classic Red Muscle</h1>
+
+        <p>
+            Timeless Design & Raw Power
+        </p>
+
+    </div>
+
+</section>
+
+<!-- ================= CONTENT ================= -->
+
+<section class="content">
+
+    <h2>Vintage Collection</h2>
+
+    <p>
+        Explore iconic classic cars with unmatched heritage,
+        handcrafted engineering and premium restoration.
+    </p>
+
+</section>
+
+<!-- ================= SECTION 3 ================= -->
+
+<section class="parallax bg3">
+
+    <div class="parallax-content">
+
+        <h1>Street Performance</h1>
+
+        <p>
+            Speed • Style • Dominance
+        </p>
+
+    </div>
+
+</section>
+
+<!-- ================= CONTENT ================= -->
+
+<section class="content">
+
+    <h2>Performance Machines</h2>
+
+    <p>
+        Experience the thrill of modern performance vehicles
+        designed for ultimate speed and luxury comfort.
+    </p>
+
+</section>
+
+<!-- ================= SECTION 4 ================= -->
+
+<section class="parallax bg4">
+
+    <div class="parallax-content">
+
+        <h1>Luxury Redefined</h1>
+
+        <p>
+            Automotive Excellence
+        </p>
+
+    </div>
+
+</section>
+
+<!-- ================= SECTION 5 ================= -->
+
+<section class="parallax bg5">
+
+    <div class="parallax-content">
+
+        <h1>Drive Beyond Limits</h1>
+
+        <p>
+            Power Meets Elegance
+        </p>
+
+    </div>
+
+</section>
+
+<!-- ================= SECTION 6 ================= -->
+
+<section class="parallax bg6">
+
+    <div class="parallax-content">
+
+        <h1>Direct Automotive</h1>
+
+        <p>
+            Your Journey Starts Here
+        </p>
+
+    </div>
+
+</section>
+
+</body>
+</html>
