@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>CSS Transform Animation</title>
+
+<style>
+
+body{
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    height:100vh;
+    background:#111;
+}
+
+/* Box Design */
+.box{
+    width:200px;
+    height:200px;
+    background:red;
+    border-radius:20px;
+
+    /* Animation */
+    animation:movebox 4s infinite;
+}
+
+/* Animation using transform properties */
+@keyframes movebox{
+
+    0%{
+        transform:translateX(0px) rotate(0deg) scale(1);
+    }
+
+    25%{
+        transform:translateX(200px) rotate(90deg) scale(1.2);
+        background:blue;
+    }
+
+    50%{
+        transform:translateY(200px) rotate(180deg) scale(1);
+        background:green;
+    }
+
+    75%{
+        transform:translateX(-200px) rotate(270deg) scale(1.2);
+        background:orange;
+    }
+
+    100%{
+        transform:translateX(0px) rotate(360deg) scale(1);
+        background:red;
+    }
+}
+
+</style>
+</head>
+
+<body>
+
+<div class="box"></div>
+
+</body>
+</html>

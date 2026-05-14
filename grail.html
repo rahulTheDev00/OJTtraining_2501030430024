@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Holy Grail Layout</title>
+
+<style>
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+body{
+    font-family:Arial,sans-serif;
+    height:100vh;
+    display:grid;
+
+    grid-template-areas:
+    "header header header"
+    "nav main aside"
+    "footer footer footer";
+
+    grid-template-columns:200px 1fr 200px;
+    grid-template-rows:80px 1fr 60px;
+}
+
+/* Header */
+header{
+    grid-area:header;
+    background:#222;
+    color:white;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    font-size:28px;
+}
+
+/* Navigation */
+nav{
+    grid-area:nav;
+    background:#3498db;
+    color:white;
+    padding:20px;
+}
+
+/* Main Content */
+main{
+    grid-area:main;
+    background:#f4f4f4;
+    padding:20px;
+}
+
+/* Sidebar */
+aside{
+    grid-area:aside;
+    background:#2ecc71;
+    color:white;
+    padding:20px;
+}
+
+/* Footer */
+footer{
+    grid-area:footer;
+    background:#222;
+    color:white;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+}
+
+</style>
+
+</head>
+<body>
+
+<header>
+    Header
+</header>
+
+<nav>
+    <h2>Navigation</h2>
+    <p>Home</p>
+    <p>About</p>
+    <p>Services</p>
+</nav>
+
+<main>
+    <h1>Main Content</h1>
+    <p>
+        This is the main content area of Holy Grail Layout.
+    </p>
+</main>
+
+<aside>
+    <h2>Sidebar</h2>
+    <p>Extra content here</p>
+</aside>
+
+<footer>
+    Footer
+</footer>
+
+</body>
+</html>
